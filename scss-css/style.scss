@@ -1,0 +1,86 @@
+@font-face {
+  font-family: ErasLight;
+  src: url(../fonts/ErasLightITC.ttf);
+}
+
+@font-face {
+  font-family: FranklinGothicBookRegular;
+  src: url(../fonts/FranklinGothicBookRegular.ttf);
+}
+
+$primary-text-color: black;
+$link-color: #993333;
+$primary-font-family: "FranklinGothicBookRegular";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $primary-text-color;
+  font-family: $primary-font-family;
+  list-style: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+
+  .no-scroll {
+    overflow-y: hidden;
+  }
+
+  body {
+    .container-preloader {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      z-index: 99999;
+      display: none;
+
+      .pulse-button {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+
+      .pulse-button {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 22px;
+        font-family: "ErasLight";
+        border: none;
+        background: $link-color;
+        background-size: 18px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+
+  #preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: white;
+  }
+}
+
+@import "partials/header";
+@import "partials/home";
+@import "partials/services";
+@import "partials/about";
+@import "partials/gallery";
+@import "partials/contact";
+@import "partials/footer";

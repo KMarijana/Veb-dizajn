@@ -1,0 +1,36 @@
+footer {
+    padding: 1%;
+    background-color: white;
+
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        grid-gap: 5%;
+        .logo-footer {
+            width: 150px;
+            height: auto;
+        }
+
+        h5 {
+            font-family: "ErasLight";
+            color: $link-color;
+            font-size: 16px;
+            margin-top: 11%;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .footer-wrapper {
+            padding: 5%;
+            .logo-footer {
+                width: 100px;
+                height: auto;
+            }
+
+            h5 {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.services-wrapper {
+    background-image: url("../photos/servicesbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    padding: 6%;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    #services {
+        margin-left: 170px;
+        margin-right: 170px;
+        overflow: hidden;
+        margin-bottom: 7%;
+
+        h1 {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            padding: 10px;
+            margin-bottom: 80px;
+            text-align: center;
+            font-size: 50px;
+            font-family: "ErasLight";
+            letter-spacing: 10px;
+            font-weight: 500;
+        }
+
+        .boxes {
+            width: 100%;
+            padding: 2px;
+            margin-top: 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 350px;
+            grid-gap: 0 30px;
+
+            .box {
+                background-color: white;
+                border: 3px solid white;
+                box-shadow: 2px 5px 5px 1px lightgrey;
+                position: relative;
+                cursor: pointer;
+
+                .inner-box {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: lightgrey;
+                    transition: 0.3s;
+                    margin-bottom: 50px;
+
+                    span {
+                        background-color: white;
+                        display: inline-block;
+                        width: 120px;
+                        height: 100px;
+                        line-height: 80px;
+                        font-size: 60px;
+
+                        img {
+                            width: 100px;
+                            height: auto;
+                        }
+                    }
+
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    overflow-x: hidden;
+                    white-space: nowrap;
+                    font-size: 18px;
+                    color: gray;
+                    text-align: justify;
+                    word-break: break-all;
+                    position: absolute;
+                    opacity: 0;
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    text-align-last: center;
+                }
+
+                &:hover {
+                    border-color: $link-color;
+                    box-shadow: none;
+
+                    .inner-box {
+                        margin-top: -50px;
+                    }
+                    h3 {
+                        opacity: 0;
+                        transition: 0.3s;
+                    }
+
+                    p {
+                        opacity: 1;
+                        margin-top: 0;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1450px) {
+        #services {
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+
+            h1 {
+                font-size: 42px;
+                margin-bottom: 50px;
+            }
+            .boxes {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto;
+                grid-gap: 15px;
+
+                .box {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        #services {
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+
+            h1 {
+                font-size: 42px;
+                margin-bottom: 50px;
+            }
+            .boxes {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                grid-gap: 30px;
+
+                .box {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        #services {
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            h1 {
+                font-size: 42px;
+                margin-bottom: 50px;
+            }
+            .boxes {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                grid-gap: 30px;
+
+                .box {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+}

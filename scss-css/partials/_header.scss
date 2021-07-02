@@ -1,0 +1,119 @@
+header {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 3px 3px 3px lightgrey;
+
+    .nav {
+        overflow: hidden;
+        width: 100%;
+
+        .mobile-button {
+            margin: 30px;
+            margin-top: 50px;
+            width: 25px;
+            height: auto;
+            float: right;
+            display: none;
+        }
+        .mobile-close {
+            margin: 30px;
+            margin-top: 50px;
+            width: 25px;
+            height: auto;
+            float: right;
+            display: none;
+        }
+
+        .logo {
+            padding: 20px;
+            margin-left: 10%;
+            width: 220px;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        ul {
+            float: right;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                line-height: 100px;
+                margin: 0 25px;
+                margin-top: 15px;
+
+                .nav-item {
+                    color: black;
+                    padding: 10px;
+                    text-decoration: none;
+                    transition: 0.5s;
+                    padding: 15px 5px;
+                    font-family: "FranklinGothicBookRegular";
+                    font-weight: 500;
+                    font-size: 22px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        border-color: $link-color;
+                    }
+                }
+
+                .is-active {
+                    border-color: $link-color;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        .mobile-button {
+            display: block !important;
+            cursor: pointer;
+
+            &.remove {
+                display: none !important;
+            }
+        }
+
+        .mobile-close {
+            &.removeClose {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .navigation-menu {
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            max-width: 200px;
+            background-color: #ffffffe6;
+
+            right: 0;
+            display: block;
+            padding: 0px 50px;
+            box-sizing: border-box;
+
+            li {
+                margin-top: 0px;
+
+                a.nav-item {
+                    display: block;
+                    padding: 0px;
+                    color: black;
+                }
+
+                span.nav-indicator {
+                    display: none;
+                }
+            }
+
+            &.active {
+                display: none;
+            }
+        }
+    }
+}

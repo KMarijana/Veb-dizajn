@@ -1,0 +1,51 @@
+.about-wrapper {
+    background-image: url("../photos/beautiful-long-brown-hair-pretty-young-woman-isolated-white.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 7%;
+
+    #about {
+        margin-left: 12%;
+        h1 {
+            font-family: "ErasLight";
+            letter-spacing: 10px;
+            font-weight: 500;
+            font-size: 50px;
+            margin-bottom: 5%;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        #about {
+            h1 {
+                font-size: 45px;
+                margin-bottom: 50px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+    @media only screen and (max-width: 700px) {
+        background-image: none;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        #about {
+            h1 {
+                font-size: 40px;
+                margin-bottom: 50px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}

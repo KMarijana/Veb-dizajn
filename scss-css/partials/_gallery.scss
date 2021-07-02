@@ -1,0 +1,199 @@
+.gallery-wrapper {
+    background-image: url("../photos/blur-metallic-hair-supplies-flat-lay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    padding: 6%;
+
+    input {
+        display: none;
+    }
+
+    #gallery {
+        margin-left: 150px;
+        margin-right: 150px;
+        justify-content: center;
+
+        h1 {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 50px;
+            font-family: "ErasLight";
+            letter-spacing: 10px;
+            font-weight: 500;
+        }
+
+        .gallery-nav {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            padding: 5px;
+            width: 100%;
+            margin-bottom: 50px;
+            text-align: center;
+            background-color: white;
+            height: 60px;
+            align-content: center;
+            box-shadow: 3px 3px 5px lightgrey;
+
+            label {
+                color: gray;
+                cursor: pointer;
+                font-size: 24px;
+
+                &:hover {
+                    color: $link-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        .photo-gallery {
+            display: grid;
+            height: 400px;
+            align-content: center;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            .img {
+                width: 320px;
+                height: 200px;
+                box-shadow: 2px 5px 5px 1px lightgray;
+            }
+
+            .pop_img_wrap {
+                position: fixed;
+                left: 0;
+                top: 8%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                transition: 0.5s;
+                z-index: 1;
+
+                .pop_img {
+                    width: 60%;
+                    height: auto;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1400px) {
+        #gallery {
+            .gallery-nav {
+                margin-bottom: 15px;
+            }
+            .photo-gallery {
+                .img {
+                    width: 230px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        #gallery {
+            margin: 20px 0px 80px 0px;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .gallery-nav {
+                label {
+                    font-size: 22px;
+                }
+            }
+
+            .photo-gallery {
+                margin-top: 150px;
+                display: grid;
+                grid-template-columns: auto auto;
+
+                .img {
+                    width: 320px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        #gallery {
+            margin: 20px 0px 80px 0px;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .gallery-nav {
+                label {
+                    font-size: 20px;
+                }
+            }
+
+            .photo-gallery {
+                margin-top: 150px;
+                margin-bottom: 150px;
+                display: grid;
+                grid-template-columns: auto auto;
+
+                .img {
+                    width: 280px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        #gallery {
+            margin: 20px 0px 80px 0px;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .gallery-nav {
+                label {
+                    font-size: 20px;
+                }
+            }
+
+            .photo-gallery {
+                margin-top: 60px;
+                margin-bottom: 60px;
+                display: grid;
+                grid-template-columns: auto auto;
+
+                .img {
+                    width: 200px;
+                    height: 150px;
+                }
+
+                .pop_img_wrap {
+                    .pop_img {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

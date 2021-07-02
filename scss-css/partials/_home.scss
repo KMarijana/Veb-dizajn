@@ -1,0 +1,73 @@
+.home-wrapper {
+    margin-top: 0px;
+    background-image: url("../photos/homebg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 17%;
+
+    h1 {
+        font-family: "ErasLight";
+        letter-spacing: 10px;
+        font-weight: 500;
+        font-size: 62px;
+        color: black;
+    }
+
+    .contact-button {
+        background-color: $link-color;
+        font-size: 22px;
+        margin-top: 50px;
+        width: 20%;
+        padding: 1%;
+        border: none;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            box-shadow: 1px 1px 15px gray;
+            cursor: pointer;
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+        h1 {
+            font-size: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 1125px) {
+        h1 {
+            font-size: 58px;
+            padding-right: 40%;
+        }
+        .contact-button {
+            width: 20%;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        h1 {
+            padding-right: 30%;
+            font-size: 55px;
+        }
+        .contact-button {
+            width: 30%;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        height: 100vh;
+
+        h1 {
+            margin-top: 40%;
+            padding-right: 50%;
+            font-size: 52px;
+        }
+
+        .contact-button {
+            width: 40%;
+            height: 40px;
+        }
+    }
+}
